@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1>Face Recognition App</h1>
+
+    <div class="known-persons">
+      <div class="person"><img src="./static/virat1.jpg" alt="Virat Kohli"><p>Virat Kohli</p></div>
+      <div class="person"><img src="./static/feder.jpeg" alt="Roger Federer"><p>Roger Federer</p></div>
+      <div class="person"><img src="./static/maria.jpeg" alt="Maria Sharapova"><p>Maria Sharapova</p></div>
+      <div class="person"><img src="./static/leonmessi.png" alt="Lionel Messi"><p>Lionel Messi</p></div>
+      <div class="person"><img src="./static/serinawilliams.jpg" alt="Serena Williams"><p>Serena Williams</p></div>
+    </div>
+  
+    <div id="dropzone">Drop or Click to Upload an Image</div>
+    <!-- <button type="submit">Classify</button> -->
+    <div id="result-container">
+      <div id="predicted-name"></div>
+      <table id="prob-table">
+        <thead>
+          <tr>
+            <th>Person</th>
+            <th>Probability (%)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  
+    <script src="app.js"></script>
+</body>
+</html>
