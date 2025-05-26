@@ -1,14 +1,8 @@
 services:
   - type: web
-    name: flask-server-only
+    name: image-classification-server
     env: python
-    buildCommand: |
-      cd server
-      pip install -r requirements.txt
-    startCommand: |
-      cd server
-      python app.py
-    envVars:
-      - key: FLASK_ENV
-        value: production
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: gunicorn server:app
+    rootDir: server
 
